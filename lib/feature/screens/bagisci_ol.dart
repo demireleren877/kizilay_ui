@@ -2,15 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kizilay_ui/feature/helpers/constants.dart';
 
-class BagisciOl extends StatefulWidget {
-  const BagisciOl({ Key? key }) : super(key: key);
-
-  @override
-  _BagisciOlState createState() => _BagisciOlState();
-}
-
-class _BagisciOlState extends State<BagisciOl> {
-  Constants constants = Constants();
+class BagisciOl extends StatelessWidget {
+  Constants constants=Constants();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
