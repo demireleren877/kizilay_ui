@@ -5,17 +5,9 @@ import 'package:kizilay_ui/feature/helpers/constants.dart';
 import 'package:kizilay_ui/feature/screens/bagisci_ol.dart';
 import 'package:kizilay_ui/feature/screens/giris_yap.dart';
 
-class StartPage extends StatefulWidget {
-  const StartPage({ Key? key }) : super(key: key);
-
-  @override
-  _StartPageState createState() => _StartPageState();
-}
-
-class _StartPageState extends State<StartPage> {
-
+class StartPage extends StatelessWidget {
   
-  Constants constants= Constants();
+  Constants constants = Constants();
 
   @override
   Widget build(BuildContext context) {

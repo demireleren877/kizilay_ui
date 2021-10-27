@@ -5,15 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'giris_yap.dart';
 
-class ValidationPage extends StatefulWidget {
-  const ValidationPage({ Key? key }) : super(key: key);
-
-  @override
-  _ValidationPageState createState() => _ValidationPageState();
-}
-
-class _ValidationPageState extends State<ValidationPage> {
+class ValidationPage extends StatelessWidget {
   Constants constants = Constants();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
