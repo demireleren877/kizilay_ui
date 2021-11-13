@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kizilay_ui/feature/helpers/constants.dart';
+import 'package:get/get.dart';
+import 'package:kizilay_ui/controllers/giris_controller.dart';
+import 'package:kizilay_ui/feature/helpers/widget_constants.dart';
 import 'package:kartal/kartal.dart';
 import 'package:kizilay_ui/feature/screens/validation_page.dart';
 
@@ -10,9 +12,9 @@ class GirisYap extends StatefulWidget {
   @override
   _GirisYapState createState() => _GirisYapState();
 }
-
+GirisController girisController = Get.put(GirisController());
 class _GirisYapState extends State<GirisYap> with TickerProviderStateMixin {
-  Constants constants = Constants();
+  WidgetConstants constants = WidgetConstants();
   late TabController tabController ;
   @override
   void initState() {
@@ -56,6 +58,7 @@ class tabbar_view extends StatelessWidget {
     return Container(
       height: 320.h,
       child: TabBarView(
+        physics: BouncingScrollPhysics(),
         controller: tabController,
         children: [
           tc_giris(),
@@ -69,9 +72,8 @@ class tabbar_view extends StatelessWidget {
 }
 
 class mail_giris extends StatelessWidget {
-  const mail_giris({
-    Key? key,
-  }) : super(key: key);
+  TextEditingController email=TextEditingController();
+  TextEditingController pass= TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +83,7 @@ class mail_giris extends StatelessWidget {
           height: 44.h,
           width: 335.w,
           child:TextField(
+            controller: email,
             style: TextStyle(fontSize: 16.sp),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.all(10),
@@ -93,7 +96,11 @@ class mail_giris extends StatelessWidget {
         Container(
           height: 44.h,
           width: 335.w,
-          child:TextFormField(  
+          child:TextFormField( 
+            controller: pass,
+            onChanged: (text){
+              text=pass.text;
+            }, 
             style: TextStyle(fontSize: 16.sp),                        
             decoration: InputDecoration(                              
               contentPadding: EdgeInsets.all(10),
@@ -117,7 +124,7 @@ class mail_giris extends StatelessWidget {
           width: 150.w,
           height: 44.h,
           child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_)=>ValidationPage()));
+            girisController.checkUser(email.text, pass.text);
           },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Giriş Yap",style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
         ),
       ],
@@ -174,7 +181,7 @@ class telno_giris extends StatelessWidget {
           width: 150.w,
           height: 44.h,
           child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_)=>ValidationPage()));
+            Get.to(()=>ValidationPage());
           },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Giriş Yap",style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
         ),
       ],
@@ -231,7 +238,7 @@ class tc_giris extends StatelessWidget {
           width: 150.w,
           height: 44.h,
           child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (_)=>ValidationPage()));
+            Get.to(()=>ValidationPage());
           },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Giriş Yap",style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
         ),
       ],

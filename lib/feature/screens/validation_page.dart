@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kizilay_ui/feature/helpers/constants.dart';
+import 'package:kizilay_ui/feature/helpers/text_constants.dart';
+import 'package:kizilay_ui/feature/helpers/widget_constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'giris_yap.dart';
 
 class ValidationPage extends StatelessWidget {
-  Constants constants = Constants();
+  WidgetConstants constants = WidgetConstants();
+  TextConstants textConstants = TextConstants();
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class ValidationPage extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Telefonunuza Gelen Kodu Giriniz",
+                    hintText: textConstants.kodgir,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -48,7 +50,7 @@ class ValidationPage extends StatelessWidget {
                   height: 44.h,
                   child: ElevatedButton(onPressed: (){
                     
-                  },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Giriş Yap",style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
+                  },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text(textConstants.login,style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
                 ),
               SizedBox(height: 10.h),
               Container(
@@ -56,7 +58,7 @@ class ValidationPage extends StatelessWidget {
                   height: 44.h,
                   child: ElevatedButton(onPressed: (){
                     
-                  },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Kodu Tekrar Gönder",style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
+                  },style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text(textConstants.resend,style: TextStyle(color: Colors.white,fontSize: 16.sp),),)
                 ),
             ],),
           ),

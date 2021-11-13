@@ -1,0 +1,29 @@
+class TextConstants{
+  String rePassword ="Şifremi Unuttum";
+  String login ="Giriş Yap";
+  String signup ="Bağışçı Ol";
+  String sorunbildir="Sorun Bildir";
+  String starttitle="KAN DOSTUM";
+  String adsoyad ="Ad ve Soyad*";
+  String tcno="Tc Kimlik Numarası*";
+  String mail="Mail Adresi*";
+  String telno="Telefon Numarası*";
+  String ulke ="Ülke*";
+  String sehir="Şehir*";
+  String ilce="İlçe*";
+  String mahalle="Mahalle*";
+  String sokak="Sokak/Cadde*";
+  String binano="Bina No*";
+  String kodgir="Telefonunuza Gelen Kodu Giriniz";
+  String resend="Kodu Tekrar Gönder";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+  // String ="";
+}

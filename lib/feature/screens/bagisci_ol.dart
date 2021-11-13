@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kizilay_ui/feature/helpers/constants.dart';
+import 'package:kizilay_ui/feature/helpers/text_constants.dart';
+import 'package:kizilay_ui/feature/helpers/widget_constants.dart';
 
 class BagisciOl extends StatelessWidget {
-  Constants constants=Constants();
+  TextConstants textConstants = TextConstants();
+  WidgetConstants constants=WidgetConstants();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -24,7 +26,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Ad ve Soyad*",
+                    hintText: textConstants.adsoyad,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -37,7 +39,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Tc Kimlik Numarası*",
+                    hintText: textConstants.tcno,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -50,7 +52,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Mail Adresi*",
+                    hintText: textConstants.mail,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -63,7 +65,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Telefon Numarası*",
+                    hintText: textConstants.telno,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -76,7 +78,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Ülke*",
+                    hintText: textConstants.ulke,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -89,7 +91,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Şehir*",
+                    hintText: textConstants.sehir,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -102,7 +104,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "İlçe*",
+                    hintText: textConstants.ilce,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -115,7 +117,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Mahalle*",
+                    hintText: textConstants.mahalle,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -128,7 +130,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Sokak/Cadde*",
+                    hintText: textConstants.sokak,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -141,7 +143,7 @@ class BagisciOl extends StatelessWidget {
                   style: TextStyle(fontSize: 16.sp),
                   decoration: InputDecoration(
                     contentPadding: EdgeInsets.all(10),
-                    hintText: "Bina No*",
+                    hintText: textConstants.binano,
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(5.r))
                   ),
                 )
@@ -150,7 +152,7 @@ class BagisciOl extends StatelessWidget {
               Container(
                 width: 275.w,
                 height: 44.h,
-                child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text("Bağışçı Ol",style: TextStyle(color: Colors.white,fontSize: 16.sp),))
+                child: ElevatedButton(onPressed: (){},style: ElevatedButton.styleFrom(primary: Color(0xFFE1393A)) ,child: Text(textConstants.signup,style: TextStyle(color: Colors.white,fontSize: 16.sp),))
               ),
             ],
           ),
